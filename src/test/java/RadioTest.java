@@ -8,7 +8,17 @@ public class RadioTest {
 
     @Before
     public void before(){
-        radio = new Radio();
+        radio = new Radio("Bush", "Wireless");
+    }
+
+    @Test
+    public void canGetMake(){
+        assertEquals("Bush", radio.getMake());
+    }
+
+    @Test
+    public void canGetModel(){
+        assertEquals("Wireless", radio.getModel());
     }
 
     @Test

@@ -8,7 +8,7 @@ public class CDPlayerTest {
 
     @Before
     public void before(){
-        cdPlayer = new CDPlayer(5);
+        cdPlayer = new CDPlayer(5, "Sony", "Boombox");
     }
 
     @Test

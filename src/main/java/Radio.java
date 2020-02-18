@@ -1,7 +1,8 @@
-public class Radio {
+public class Radio extends Component {
     private String station;
 
-    public Radio(){
+    public Radio(String make, String model){
+        super(make, model);
         this.station = "";
     }
 

@@ -8,7 +8,7 @@ public class RecordDeckTest {
 
     @Before
     public void before(){
-        recordDeck = new RecordDeck();
+        recordDeck = new RecordDeck("Clearaudio", "Concept");
     }
 
 
