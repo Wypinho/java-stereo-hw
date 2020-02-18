@@ -1,4 +1,4 @@
-public class CDPlayer extends Component {
+public class CDPlayer extends Component implements IPlay {
     private int cdCapacity;
 
     public CDPlayer(int cdCapacity, String make, String model){
@@ -9,4 +9,9 @@ public class CDPlayer extends Component {
     public int getCdCapacity() {
         return cdCapacity;
     }
+
+    public String play(String cd) {
+        return "Tra la la";
+    }
+
 }

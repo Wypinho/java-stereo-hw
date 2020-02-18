@@ -11,9 +11,14 @@ public class RecordDeckTest {
         recordDeck = new RecordDeck("Clearaudio", "Concept");
     }
 
-
     @Test
     public void recordDeckHasSpeeds(){
         assertEquals(33, recordDeck.getSpeedByIndex(0));
+    }
+
+    @Test
+    public void recordDeckPlaysRecord(){
+        String record = "Revolver";
+        assertEquals("Tra la la", recordDeck.play(record));
     }
 }

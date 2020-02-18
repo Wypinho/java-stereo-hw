@@ -16,4 +16,10 @@ public class CDPlayerTest {
         assertEquals(5, cdPlayer.getCdCapacity());
     }
 
+    @Test
+    public void cdPlayerCanPlayCDs(){
+        String cd = "Help!";
+        assertEquals("Tra la la", cdPlayer.play(cd));
+    }
+
 }

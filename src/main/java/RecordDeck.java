@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class RecordDeck extends Component {
+public class RecordDeck extends Component implements IPlay {
     private ArrayList<Integer> playSpeeds;
 
     public RecordDeck(String make, String model){
@@ -12,5 +12,10 @@ public class RecordDeck extends Component {
 
     public int getSpeedByIndex(int index) {
         return this.playSpeeds.get(index);
+    }
+
+//    @Override
+    public String play(String record) {
+        return "Tra la la";
     }
 }
