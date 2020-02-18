@@ -8,9 +8,12 @@ public class CDPlayerTest {
 
     @Before
     public void before(){
-        cdPlayer = new CDPlayer();
+        cdPlayer = new CDPlayer(5);
     }
 
-
+    @Test
+    public void cdPlayerHasCDCapacity(){
+        assertEquals(5, cdPlayer.getCdCapacity());
+    }
 
 }
