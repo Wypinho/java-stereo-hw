@@ -3,10 +3,12 @@ import java.util.ArrayList;
 public class Stereo {
     private String name;
     private ArrayList<IMakeNoise> components;
+    private int volume;
 
     public Stereo(String name){
         this.name = name;
         components = new ArrayList<IMakeNoise>();
+        this.volume = 0;
     }
 
     public int componentCount() {
@@ -34,5 +36,21 @@ public class Stereo {
     public String playRecord(String record) {
         IMakeNoise recordDeck = getComponent(2);
         return recordDeck.makeNoise(record);
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void raiseVolume() {
+        if (this.volume < 11) {
+            this.volume += 1;
+        }
+    }
+
+    public void lowerVolume() {
+        if (this.volume > 0){
+            this.volume -= 1;
+        }
     }
 }

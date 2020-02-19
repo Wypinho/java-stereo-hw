@@ -38,6 +38,24 @@ public class StereoTest {
         assertEquals("Radio Scotland", stereo.tuneRadio(station));
     }
 
+    @Test
+    public void stereoCanRaiseVolume(){
+        stereo.raiseVolume();
+        stereo.raiseVolume();
+        stereo.raiseVolume();
+        assertEquals(3, stereo.getVolume());
+    }
+
+    @Test
+    public void stereoCanLowerVolume(){
+        stereo.raiseVolume();
+        stereo.raiseVolume();
+        stereo.raiseVolume();
+        stereo.lowerVolume();
+        stereo.lowerVolume();
+        assertEquals(1, stereo.getVolume());
+    }
+
 //    @Test
 //    public void stereoStartsWithNoComponents(){
 //        assertEquals(0, stereo.componentCount());
