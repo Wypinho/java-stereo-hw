@@ -6,12 +6,16 @@ public class Radio extends Component {
         this.station = "";
     }
 
-    public String getStation() {
+    private String getStation() {
         return station;
     }
 
-
-    public void tune(String station) {
+    private void tune(String station) {
         this.station = station;
+    }
+
+    public String makeNoise(String choice) {
+        this.tune(choice);
+        return this.getStation();
     }
 }

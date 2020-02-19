@@ -1,4 +1,4 @@
-public abstract class Component {
+public abstract class Component implements IMakeNoise {
     private String make;
     private String model;
 

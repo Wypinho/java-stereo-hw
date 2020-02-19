@@ -18,4 +18,8 @@ public class RecordDeck extends Component implements IPlay {
     public String play(String record) {
         return "Tra la la";
     }
+
+    public String makeNoise(String choice) {
+        return this.play(choice);
+    }
 }

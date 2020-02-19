@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class Stereo {
     private String name;
-    private ArrayList<Component> components;
+    private ArrayList<IMakeNoise> components;
 
     public Stereo(String name){
         this.name = name;
-        components = new ArrayList<Component>();
+        components = new ArrayList<IMakeNoise>();
     }
 
     public int componentCount() {
@@ -17,12 +17,22 @@ public class Stereo {
         this.components.add(component);
     }
 
-    public String playCD(String cd) {
-        Component cdPlayer = getComponent(1);
-        return cdPlayer.play(cd);
+    private IMakeNoise getComponent(int index) {
+        return this.components.get(index);
     }
 
-    private Component getComponent(int index) {
-        return this.components.get(index);
+    public String tuneRadio(String station) {
+        IMakeNoise radio = getComponent(0);
+        return radio.makeNoise(station);
+    }
+
+    public String playCD(String cd) {
+        IMakeNoise cdPlayer = getComponent(1);
+        return cdPlayer.makeNoise(cd);
+    }
+
+    public String playRecord(String record) {
+        IMakeNoise recordDeck = getComponent(2);
+        return recordDeck.makeNoise(record);
     }
 }

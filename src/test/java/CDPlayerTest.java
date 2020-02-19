@@ -19,7 +19,7 @@ public class CDPlayerTest {
     @Test
     public void cdPlayerCanPlayCDs(){
         String cd = "Help!";
-        assertEquals("Tra la la", cdPlayer.play(cd));
+        assertEquals("Tra la la", cdPlayer.makeNoise(cd));
     }
 
 }

@@ -23,7 +23,6 @@ public class RadioTest {
 
     @Test
     public void radioCanBeTuned(){
-        radio.tune("Radio 4");
-        assertEquals("Radio 4", radio.getStation());
+        assertEquals("Radio 4", radio.makeNoise("Radio 4"));
     }
 }

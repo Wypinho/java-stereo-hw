@@ -14,4 +14,7 @@ public class CDPlayer extends Component implements IPlay {
         return "Tra la la";
     }
 
+    public String makeNoise(String choice) {
+        return this.play(choice);
+    }
 }

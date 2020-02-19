@@ -26,7 +26,17 @@ public class StereoTest {
         assertEquals("Tra la la", stereo.playCD(cd));
     }
 
+    @Test
+    public void stereoCanPlayRecordDeck(){
+        String record = "White Album";
+        assertEquals("Tra la la", stereo.playRecord(record));
+    }
 
+    @Test
+    public void stereoCanTuneRadio(){
+        String station = "Radio Scotland";
+        assertEquals("Radio Scotland", stereo.tuneRadio(station));
+    }
 
 //    @Test
 //    public void stereoStartsWithNoComponents(){
